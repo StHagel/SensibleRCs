@@ -1,0 +1,31 @@
+[general]
+targets = github_sthagel
+
+shorten = True
+
+inline_links = False
+annotation_links = True
+annotation_comments = False
+
+legacy_matching = False
+
+log.level = DEBUG
+
+description_length = 120
+annotation_length = 120
+
+[github_sthagel]
+service = github
+
+github.username = sthagel
+github.login = sthagel
+github.token = <YOUR_TOKEN_HERE>
+
+github.include_user_issues = True
+github.include_user_repos = True
+github.include_closed_issues = True
+github.involved_issues = False
+
+github.query = author:sthagel archived:false state:all type:all
+
+github.project_template = git.{{githubrepo.lower().replace('.', '-').replace('/', '.')}}
